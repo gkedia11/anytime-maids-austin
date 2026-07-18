@@ -1,0 +1,188 @@
+/* Anytime Maids Service — brand utilities */
+:root {
+  --primary: #0284C7;
+  --secondary: #16A34A;
+  --accent: #EAB308;
+  --surface: #F8FAFC;
+  --ink: #0F172A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 8px 20px -8px rgba(2, 132, 199, 0.55);
+}
+.btn-primary:hover {
+  background: #0369a1;
+  transform: translateY(-1px);
+}
+.btn-primary:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 8px 20px -8px rgba(22, 163, 74, 0.45);
+}
+.btn-secondary:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 800;
+  border-radius: 0.75rem;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-accent:hover {
+  background: #ca8a04;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 700;
+  border: 2px solid var(--primary);
+  border-radius: 0.75rem;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-outline:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+}
+
+.lang-btn {
+  background: #fff;
+  color: #64748b;
+  transition: background 0.15s, color 0.15s;
+}
+.lang-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+.lang-btn:hover:not(.active) {
+  background: #f1f5f9;
+}
+
+.service-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px -12px rgba(2, 132, 199, 0.22);
+}
+
+/* FAQ accordion */
+.faq-item {
+  background: var(--surface);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1rem 1.1rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  user-select: none;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  background: rgba(2, 132, 199, 0.12);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.2s, background 0.2s;
+}
+.faq-item[open] summary::after {
+  content: '−';
+  background: var(--primary);
+  color: #fff;
+}
+.faq-item .faq-body {
+  padding: 0 1.1rem 1.1rem;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.55;
+}
+
+/* Modal open lock */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .service-card,
+  .btn-primary,
+  .btn-secondary,
+  .gallery-item img {
+    transition: none !important;
+  }
+}
