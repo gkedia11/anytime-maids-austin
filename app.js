@@ -1,6 +1,12 @@
-/* Anytime Maids Service — interactions + full EN/ES i18n */
+/* Anytime Maid Service — interactions + EN / ES / FR i18n */
 (function () {
   'use strict';
+
+  const langMeta = {
+    en: { name: 'English', flag: 'us', htmlLang: 'en' },
+    es: { name: 'Español', flag: 'es', htmlLang: 'es' },
+    fr: { name: 'Français', flag: 'fr', htmlLang: 'fr' },
+  };
 
   const translations = {
     en: {
@@ -22,7 +28,7 @@
       'hero.point2': 'Same-Week Availability',
       'hero.point3': 'Eco Options Available',
       'services.kicker': 'House Cleaning Austin TX',
-      'services.title': 'Professional Maids Austin Trust',
+      'services.title': 'Professional Maid Service Austin Trusts',
       'services.desc': 'From weekly refresh cleans to move out cleaning Austin homeowners rely on — book your spot today.',
       'svc1.title': 'Regular House Cleaning',
       'svc1.desc': 'Weekly or bi-weekly professional maid service that keeps your Austin home consistently fresh and inviting.',
@@ -63,7 +69,7 @@
       'gallery.cap7': 'Eco-friendly clean',
       'gallery.cap8': 'Living room glow',
       'why.kicker': 'Why Choose Us',
-      'why.title': 'Austin Families Trust Anytime Maids',
+      'why.title': 'Austin Families Trust Anytime Maid Service',
       'why.desc': 'Warm, reliable professional maids Austin homeowners recommend to friends and neighbors.',
       'why.t1': 'Local Austin Team',
       'why.d1': 'Neighbors who know Central Texas homes, hard water, and pollen season.',
@@ -122,7 +128,7 @@
       'hero.point2': 'Disponibilidad la Misma Semana',
       'hero.point3': 'Opciones Ecológicas',
       'services.kicker': 'Limpieza de Casas en Austin TX',
-      'services.title': 'Mucamas Profesionales de Confianza en Austin',
+      'services.title': 'Servicio Profesional de Mucamas en el que Austin Confía',
       'services.desc': 'Desde limpiezas semanales hasta limpieza de mudanza en Austin — reserve su espacio hoy.',
       'svc1.title': 'Limpieza Regular del Hogar',
       'svc1.desc': 'Servicio profesional semanal o quincenal que mantiene su hogar en Austin siempre fresco y acogedor.',
@@ -163,7 +169,7 @@
       'gallery.cap7': 'Limpieza ecológica',
       'gallery.cap8': 'Sala luminosa',
       'why.kicker': 'Por Qué Elegirnos',
-      'why.title': 'Familias de Austin Confían en Anytime Maids',
+      'why.title': 'Familias de Austin Confían en Anytime Maid Service',
       'why.desc': 'Mucamas profesionales cálidas y confiables que los dueños de casa en Austin recomiendan.',
       'why.t1': 'Equipo Local de Austin',
       'why.d1': 'Vecinos que conocen los hogares de Texas Central, el agua dura y la temporada de polen.',
@@ -202,6 +208,106 @@
       'footer.ctaTitle': 'Obtenga un hogar más limpio',
       'footer.rights': 'Todos los derechos reservados.',
       'footer.seo': 'Servicio de mucamas Austin · Limpieza de casas Austin TX · Limpieza de mudanza Austin',
+    },
+    fr: {
+      'nav.services': 'Services',
+      'nav.virtual': 'Nettoyage Virtuel',
+      'nav.gallery': 'Galerie',
+      'nav.why': 'Pourquoi Nous',
+      'nav.contact': 'Contact',
+      'cta.bookNow': 'Réserver',
+      'cta.bookCleaning': 'Réserver un Nettoyage',
+      'cta.tryVirtual': 'Essayer le Nettoyage Virtuel',
+      'cta.callToBook': 'Appelez le 512-945-1625 pour Réserver',
+      'cta.preferPro': 'Préférez un pro ? Réservez un nettoyage',
+      'cta.getResults': 'Obtenez ces résultats — Réservez',
+      'hero.badge': 'Service de ménage à Austin · Pros de confiance',
+      'hero.title': 'Nettoyage de confiance à Austin, TX — Quand vous en avez besoin',
+      'hero.sub': 'Professionnel • Abordable • Service local de confiance',
+      'hero.point1': 'Assuré & cautionné',
+      'hero.point2': 'Disponibilité dans la semaine',
+      'hero.point3': 'Options écologiques',
+      'services.kicker': 'Nettoyage de maison Austin TX',
+      'services.title': 'Un service de ménage professionnel en qui Austin a confiance',
+      'services.desc': 'Des entretiens hebdomadaires au nettoyage de déménagement à Austin — réservez dès aujourd’hui.',
+      'svc1.title': 'Nettoyage régulier',
+      'svc1.desc': 'Service professionnel hebdomadaire ou bihebdomadaire pour garder votre maison d’Austin fraîche et accueillante.',
+      'svc1.price': 'À partir de 120 $',
+      'svc2.title': 'Grand nettoyage',
+      'svc2.desc': 'Nettoyage en profondeur des cuisines, salles de bain, plinthes et recoins — parfait pour une remise à neuf saisonnière.',
+      'svc2.price': 'À partir de 220 $',
+      'svc3.title': 'Entrée / Sortie (Déménagement)',
+      'svc3.desc': 'Nettoyage de déménagement plébiscité à Austin — résultats prêts pour le dépôt de garantie.',
+      'svc3.price': 'À partir de 250 $',
+      'svc4.title': 'Bureaux & Commercial',
+      'svc4.desc': 'Nettoyage fiable de bureaux pour petites entreprises, suites et espaces partagés à Austin, horaires flexibles.',
+      'svc4.price': 'Devis personnalisé',
+      'svc5.title': 'Post-construction',
+      'svc5.desc': 'Élimination de poussière, débris et particules fines après travaux pour un espace sûr et brillant.',
+      'svc5.price': 'Devis personnalisé',
+      'svc6.title': 'Options écologiques',
+      'svc6.desc': 'Produits à base végétale, faibles en COV, sûrs pour enfants, animaux et foyers sensibles.',
+      'svc6.price': 'À partir de 130 $',
+      'virtual.badge': 'Aide DIY gratuite',
+      'virtual.title': 'Aide au nettoyage virtuel — Réponses DIY instantanées',
+      'virtual.desc': 'Posez vos questions à nos experts : taches de vin sur moquette, graisse sur carrelage, odeurs d’animaux sur tissus, et plus. Conseils étape par étape instantanément.',
+      'virtual.inputLabel': 'Votre question de nettoyage',
+      'virtual.placeholder': 'ex. Comment enlever le vin rouge de la moquette ?',
+      'virtual.askBtn': 'Poser la question',
+      'virtual.faqTitle': 'FAQ taches & surfaces courantes',
+      'virtual.empty': 'Veuillez d’abord saisir une question de nettoyage.',
+      'virtual.thinking': 'Consultation de nos conseils pro…',
+      'gallery.kicker': 'Vrais résultats',
+      'gallery.title': 'Galerie avant / après',
+      'gallery.desc': 'Découvrez l’éclat que notre service de ménage apporte aux maisons du centre du Texas.',
+      'gallery.cap1': 'Transformation déménagement',
+      'gallery.cap2': 'Grand nettoyage salle de bain',
+      'gallery.cap3': 'Cuisine prête',
+      'gallery.cap4': 'Finitions éclatantes',
+      'gallery.cap5': 'Bureau impeccable',
+      'gallery.cap6': 'Post-construction',
+      'gallery.cap7': 'Nettoyage écologique',
+      'gallery.cap8': 'Salon lumineux',
+      'why.kicker': 'Pourquoi nous choisir',
+      'why.title': 'Les familles d’Austin font confiance à Anytime Maid Service',
+      'why.desc': 'Des professionnelles chaleureuses et fiables que les propriétaires d’Austin recommandent.',
+      'why.t1': 'Équipe locale d’Austin',
+      'why.d1': 'Des voisins qui connaissent les maisons du Texas central, l’eau calcaire et la saison des pollens.',
+      'why.t2': 'Assuré & cautionné',
+      'why.d2': 'Tranquillité d’esprit à chaque visite — votre maison et vos biens sont protégés.',
+      'why.t3': '100 % satisfaction',
+      'why.d3': 'Pas satisfait ? Nous corrigeons — votre sourire est notre checklist qualité.',
+      'why.t4': 'Produits éco disponibles',
+      'why.d4': 'Demandez des produits verts efficaces sans fumées agressives.',
+      'why.q1': '« Meilleur service de ménage à Austin. Toujours à l’heure, toujours minutieux — notre cuisine brille. »',
+      'why.q2': '« Le nettoyage de déménagement a sauvé notre dépôt. Des pros sur qui on peut vraiment compter. »',
+      'why.q3': '« Équipe sympathique, options éco pour notre tout-petit, et des prix de nettoyage Austin TX qui ont du sens. »',
+      'contact.kicker': 'Réservez aujourd’hui',
+      'contact.title': 'Contact & réservation',
+      'contact.desc': 'Demandez votre nettoyage en quelques minutes. Nous confirmons par téléphone ou e-mail.',
+      'contact.reach': 'Contactez-nous à tout moment',
+      'contact.area': 'Service à Austin, TX et environs',
+      'contact.mapNote': 'Fiers de servir la grande région d’Austin',
+      'form.name': 'Nom complet',
+      'form.phone': 'Téléphone',
+      'form.email': 'E-mail',
+      'form.address': 'Adresse du service',
+      'form.service': 'Type de service',
+      'form.serviceSelect': 'Choisissez un service…',
+      'form.date': 'Date souhaitée',
+      'form.notes': 'Notes',
+      'form.notesPh': 'Animaux, code portail, zones prioritaires…',
+      'form.submit': 'Envoyer la demande de réservation',
+      'form.success': 'Merci ! Votre demande de réservation a bien été reçue. Nous vous contacterons bientôt au numéro ou e-mail fourni. Pour un service plus rapide, appelez le 512-945-1625.',
+      'modal.title': 'Réservez votre nettoyage',
+      'banner.title': 'Prêt pour une maison plus fraîche ?',
+      'banner.sub': 'Réservez un nettoyage professionnel à Austin aujourd’hui — les créneaux partent vite.',
+      'footer.blurb': 'Des professionnelles joyeuses et fiables pour le nettoyage de maisons à Austin TX — quand vous avez besoin d’un nouveau départ.',
+      'footer.explore': 'Explorer',
+      'footer.contact': 'Contact',
+      'footer.ctaTitle': 'Obtenez une maison plus propre',
+      'footer.rights': 'Tous droits réservés.',
+      'footer.seo': 'Service de ménage Austin · Nettoyage de maison Austin TX · Nettoyage de déménagement Austin',
     },
   };
 
@@ -274,9 +380,42 @@
         a: 'Quite el polvo o aspire en modo piso duro. Trapee ligeramente con limpiador para madera o jabón suave en agua — el trapo casi seco. Nunca empape la madera. Seque de inmediato. Evite vapor a menos que el fabricante lo permita.',
       },
     ],
+    fr: [
+      {
+        q: 'Comment enlever le vin rouge de la moquette ?',
+        a: 'Tamponnez immédiatement avec un chiffon blanc propre (ne frottez jamais). Saupoudrez de sel ou de bicarbonate, aspirez, puis mélangez 1 part de vinaigre blanc + 2 parts d’eau + une goutte de liquide vaisselle. Tamponnez de l’extérieur vers l’intérieur. Rincez à l’eau froide et séchez. Pour les taches anciennes, appelez-nous pour une extraction pro.',
+      },
+      {
+        q: 'Comment enlever la graisse des carreaux de cuisine ?',
+        a: 'Retirez l’excès avec du papier absorbant. Vaporisez de l’eau tiède savonneuse, laissez 5 minutes, frottez avec une brosse douce ou un tampon non abrasif, puis rincez. Pour la graisse tenace, utilisez une pâte de bicarbonate. Évitez la laine d’acier sur le carrelage émaillé.',
+      },
+      {
+        q: 'Comment éliminer les odeurs d’animaux sur tissus et tissus d’ameublement ?',
+        a: 'Aspirez d’abord soigneusement. Saupoudrez de bicarbonate, attendez 20–30 minutes, aspirez à nouveau. Traitez avec un nettoyant enzymatique pour urine d’animaux. Séchez complètement. La vapeur aide pour les odeurs profondes — nous pouvons l’inclure dans un grand nettoyage.',
+      },
+      {
+        q: 'Quelle est la meilleure façon d’enlever le calcaire sur le verre ?',
+        a: 'Mélangez parts égales de vinaigre blanc et d’eau. Vaporisez, attendez 5–10 minutes, essuyez avec une microfibre, puis polissez. Pour un dépôt important, utilisez un détartrant non abrasif pour le verre. Séchez les portes de douche après chaque usage.',
+      },
+      {
+        q: 'Comment nettoyer l’inox sans traces ?',
+        a: 'Passez une microfibre humide avec une goutte de liquide vaisselle dans le sens du grain. Rincez le chiffon et repassez. Terminez avec un chiffon sec. Optionnel : une touche d’huile minérale pour la brillance. Évitez l’eau de Javel et les poudres abrasives.',
+      },
+      {
+        q: 'Comment enlever une tache de café sur le plan de travail ?',
+        a: 'Sur pierre scellée ou stratifié : essuyez vite à l’eau savonneuse tiède. Pour les taches, pâte de bicarbonate 10 minutes, essuyez doucement et rincez. Évitez les acides (vinaigre/citron) sur le marbre ou la pierre calcaire naturelle.',
+      },
+      {
+        q: 'Comment nettoyer les joints de carrelage en sécurité ?',
+        a: 'Faites une pâte de bicarbonate et d’eau, appliquez sur les joints, frottez avec une brosse douce, vaporisez du vinaigre blanc (ou un agent oxygéné pour joints colorés), attendez, frottez et rincez. Scellez les joints une fois secs.',
+      },
+      {
+        q: 'Que faire en DIY pour un parquet en bois ?',
+        a: 'Dépoussiérez ou aspirez en mode sols durs d’abord. Passez une serpillière légèrement humide avec un nettoyant pour bois ou quelques gouttes de savon doux — presque sèche. Ne jamais noyer le bois. Séchez immédiatement. Évitez la vapeur sauf si le fabricant l’autorise.',
+      },
+    ],
   };
 
-  // Keyword → answer map for virtual cleaning form
   const answerBank = {
     en: [
       {
@@ -382,23 +521,104 @@
           'El precio depende del tamaño del hogar, condición y tipo de servicio. Limpiezas regulares desde ~$120; profundas desde $220; mudanzas desde $250. Oficinas y post-construcción son cotización personalizada. Llame al 512-945-1625 o use Reservar Ahora.',
       },
     ],
+    fr: [
+      {
+        keys: ['vin', 'moquette', 'tache de vin', 'wine'],
+        answer:
+          'Vin rouge sur moquette : tamponnez (ne frottez pas) avec un chiffon blanc. Couvrez de sel ou de bicarbonate 5–10 min, aspirez, puis tamponnez avec 1 tasse d’eau + 1 c. à soupe de vinaigre blanc + une goutte de liquide vaisselle. Travaillez depuis le bord. Rincez à l’eau froide. Pour les grandes taches, réservez un grand nettoyage avec extraction pro.',
+      },
+      {
+        keys: ['graisse', 'huile', 'cuisinière', 'grease'],
+        answer:
+          'Graisse de cuisine : retirez d’abord l’excès. Vaporisez eau tiède + liquide vaisselle, attendez 5 min, frottez avec un tampon non abrasif. La pâte de bicarbonate aide sur les taches cuites. Rincez et séchez. Nos forfaits réguliers ou profonds dégraissent hottes et crédences en profondeur.',
+      },
+      {
+        keys: ['animal', 'urine', 'odeur', 'chien', 'chat', 'pet'],
+        answer:
+          'Odeurs d’animaux : aspirez, bicarbonate 20–30 min, aspirez à nouveau. Utilisez un nettoyant enzymatique à la source. Séchez bien. Nous pouvons ajouter un traitement des odeurs à votre nettoyage à Austin — mentionnez les animaux à la réservation.',
+      },
+      {
+        keys: ['calcaire', 'eau dure', 'douche', 'verre', 'taches', 'hard water'],
+        answer:
+          'Taches de calcaire : vinaigre blanc et eau à parts égales, vaporisez, attendez 5–10 min, essuyez à la microfibre et séchez. Une raclette après chaque douche limite les dépôts. Notre grand nettoyage inclut vitres et robinetterie — très demandé à Austin.',
+      },
+      {
+        keys: ['inox', 'acier', 'frigo', 'électroménager', 'stainless'],
+        answer:
+          'Inox : microfibre humide avec une goutte de liquide vaisselle dans le sens du grain, puis séchez. Évitez les essuie-tout et l’eau de Javel. Une touche d’huile minérale réduit les traces de doigts. Nous polissons les appareils à chaque entretien régulier.',
+      },
+      {
+        keys: ['café', 'thé', 'plan de travail', 'counter', 'coffee'],
+        answer:
+          'Taches de café : essuyez tout de suite à l’eau savonneuse tiède. Pâte de bicarbonate 10 min pour les traces. N’utilisez jamais de vinaigre sur le marbre ou la pierre naturelle. Indiquez le matériau de votre plan de travail à la réservation.',
+      },
+      {
+        keys: ['joint', 'carrelage', 'moisissure', 'grout', 'tile'],
+        answer:
+          'Joints : pâte de bicarbonate + brosse douce, puis vinaigre (ou agent oxygéné pour joints colorés). Frottez, rincez, séchez. Scellez une fois secs. Pour les moisissures de salle de bain, améliorez la ventilation. Le grand nettoyage inclut les joints en détail.',
+      },
+      {
+        keys: ['bois', 'parquet', 'sol', 'hardwood', 'wood'],
+        answer:
+          'Parquet : dépoussiérez ou aspirez d’abord, puis serpillière quasi sèche avec un nettoyant pour bois. Ne jamais noyer. Séchez les éclaboussures aussitôt. Notre équipe est formée pour le hardwood et le LVP à Austin — notez le type de sol dans votre réservation.',
+      },
+      {
+        keys: ['déménagement', 'dépôt', 'vide', 'sortie', 'move'],
+        answer:
+          'Nettoyage de déménagement : maison vide, focus cuisine, salles de bain, intérieurs de placards, appareils, plinthes et sols. Réservez Entrée/Sortie (à partir de 250 $) et partagez votre checklist — nous visons un résultat prêt pour le dépôt de garantie.',
+      },
+      {
+        keys: ['prix', 'coût', 'combien', 'devis', 'price'],
+        answer:
+          'Le prix dépend de la taille du logement, de l’état et du type de service. Entretiens réguliers souvent dès ~120 $ ; grands nettoyages dès 220 $ ; déménagements dès 250 $. Bureaux et post-construction : devis sur mesure. Appelez le 512-945-1625 ou utilisez Réserver.',
+      },
+    ],
   };
 
   const defaultAnswer = {
     en: 'Great question! For most household messes: (1) blot or dry-wipe excess, (2) use the mildest effective cleaner first (soap + water, then baking soda or vinegar where safe), (3) rinse and dry. Avoid mixing bleach with ammonia or vinegar. For best results in Austin homes — hard water, pollen, and pet traffic — book a professional clean. Call 512-945-1625 or hit Book Now. Tip: describe the surface and stain type for more specific advice next time.',
-    es: '¡Buena pregunta! Para la mayoría de manchas: (1) seque o retire el exceso, (2) use el limpiador más suave efectivo (jabón + agua, luego bicarbonato o vinagre donde sea seguro), (3) enjuague y seque. No mezcle cloro con amoníaco o vinagre. Para mejores resultados en hogares de Austin, reserve una limpieza profesional. Llame al 512-945-1625 o pulse Reservar Ahora. Consejo: describa la superficie y el tipo de mancha para una respuesta más específica.',
+    es: '¡Buena pregunta! Para la mayoría de manchas: (1) seque o retire el exceso, (2) use el limpiador más suave efectivo (jabón + agua, luego bicarbonato o vinagre donde sea seguro), (3) enjuague y seque. No mezcle cloro con amoníaco o vinagre. Para mejores resultados en hogares de Austin, reserve una limpieza profesional. Llame al 512-945-1625 o pulse Reservar Ahora.',
+    fr: 'Bonne question ! Pour la plupart des taches : (1) tamponnez ou retirez l’excès, (2) utilisez d’abord le nettoyant le plus doux efficace (savon + eau, puis bicarbonate ou vinaigre si sûr), (3) rincez et séchez. Ne mélangez pas l’eau de Javel avec l’ammoniac ou le vinaigre. Pour de meilleurs résultats à Austin, réservez un nettoyage pro. Appelez le 512-945-1625 ou cliquez sur Réserver.',
   };
 
   let currentLang = localStorage.getItem('ams-lang') || 'en';
+  if (!langMeta[currentLang]) currentLang = 'en';
 
   function t(key) {
     return (translations[currentLang] && translations[currentLang][key]) || translations.en[key] || key;
   }
 
+  function flagUrl(code) {
+    return 'https://flagcdn.com/w40/' + code + '.png';
+  }
+
+  function updateLangUI() {
+    const meta = langMeta[currentLang] || langMeta.en;
+    const flagEl = document.getElementById('lang-current-flag');
+    const nameEl = document.getElementById('lang-current-name');
+    if (flagEl) {
+      flagEl.src = flagUrl(meta.flag);
+      flagEl.alt = meta.name + ' flag';
+    }
+    if (nameEl) nameEl.textContent = meta.name;
+
+    document.querySelectorAll('.lang-option').forEach((btn) => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
+    });
+  }
+
+  function setLangMenuOpen(open) {
+    const menu = document.getElementById('lang-menu');
+    const toggle = document.getElementById('lang-toggle');
+    if (!menu || !toggle) return;
+    menu.classList.toggle('hidden', !open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
   function applyLanguage(lang) {
-    currentLang = lang === 'es' ? 'es' : 'en';
+    currentLang = langMeta[lang] ? lang : 'en';
     localStorage.setItem('ams-lang', currentLang);
-    document.documentElement.lang = currentLang;
+    document.documentElement.lang = langMeta[currentLang].htmlLang;
 
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const key = el.getAttribute('data-i18n');
@@ -412,11 +632,9 @@
       if (val) el.setAttribute('placeholder', val);
     });
 
-    // Language toggle UI
-    document.getElementById('lang-en')?.classList.toggle('active', currentLang === 'en');
-    document.getElementById('lang-es')?.classList.toggle('active', currentLang === 'es');
-
+    updateLangUI();
     renderFaqs();
+    setLangMenuOpen(false);
   }
 
   function renderFaqs() {
@@ -425,7 +643,7 @@
     const items = faqs[currentLang] || faqs.en;
     list.innerHTML = items
       .map(
-        (item, i) => `
+        (item) => `
       <details class="faq-item">
         <summary>${escapeHtml(item.q)}</summary>
         <div class="faq-body">${escapeHtml(item.a)}</div>
@@ -454,7 +672,6 @@
     return defaultAnswer[currentLang] || defaultAnswer.en;
   }
 
-  // Modal
   const modal = document.getElementById('booking-modal');
   function openModal(service) {
     if (!modal) return;
@@ -491,7 +708,7 @@
         prev.push({ ...data, at: new Date().toISOString(), lang: currentLang });
         localStorage.setItem('ams-bookings', JSON.stringify(prev));
       } catch (_) {
-        /* ignore storage errors */
+        /* ignore */
       }
       if (successEl) {
         successEl.textContent = t('form.success');
@@ -501,11 +718,9 @@
     });
   }
 
-  // Init
   document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Min date = today
     const today = new Date().toISOString().split('T')[0];
     document.querySelectorAll('input[type="date"]').forEach((el) => {
       el.min = today;
@@ -513,8 +728,27 @@
 
     applyLanguage(currentLang);
 
-    document.getElementById('lang-en')?.addEventListener('click', () => applyLanguage('en'));
-    document.getElementById('lang-es')?.addEventListener('click', () => applyLanguage('es'));
+    // Language dropdown
+    const toggle = document.getElementById('lang-toggle');
+    toggle?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const menu = document.getElementById('lang-menu');
+      const open = menu?.classList.contains('hidden');
+      setLangMenuOpen(!!open);
+    });
+    document.querySelectorAll('.lang-option').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        applyLanguage(btn.getAttribute('data-lang'));
+      });
+    });
+    document.addEventListener('click', (e) => {
+      const switcher = document.getElementById('lang-switcher');
+      if (switcher && !switcher.contains(e.target)) setLangMenuOpen(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setLangMenuOpen(false);
+    });
 
     // Mobile menu
     const menuBtn = document.getElementById('mobile-menu-btn');
@@ -530,11 +764,9 @@
       });
     });
 
-    // Booking buttons
     document.querySelectorAll('[data-open-booking]').forEach((btn) => {
       btn.addEventListener('click', () => {
-        const service = btn.getAttribute('data-service') || '';
-        openModal(service);
+        openModal(btn.getAttribute('data-service') || '');
         menu?.classList.add('hidden');
       });
     });
@@ -545,7 +777,6 @@
       if (e.key === 'Escape') closeModal();
     });
 
-    // Forms
     const bookingForm = document.getElementById('booking-form');
     const formSuccess = document.getElementById('form-success');
     if (bookingForm) handleFormSubmit(bookingForm, formSuccess);
@@ -554,7 +785,6 @@
     const modalSuccess = document.getElementById('modal-success');
     if (modalForm) handleFormSubmit(modalForm, modalSuccess);
 
-    // Virtual Q&A
     const askBtn = document.getElementById('virtual-ask');
     const qInput = document.getElementById('virtual-q');
     const answerBox = document.getElementById('virtual-answer');

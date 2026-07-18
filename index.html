@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Professional Maid Cleaning Austin TX | Anytime Maids Service</title>
+  <title>Professional Maid Cleaning Austin TX | Anytime Maid Service</title>
   <meta name="description" content="Reliable house cleaning, deep cleaning & virtual DIY help in Austin. Book trusted maids. Call 512-945-1625 or email jazzy@anytimemaidservice.com" />
   <meta name="keywords" content="Austin maid service, house cleaning Austin TX, professional maids Austin, move out cleaning Austin, deep cleaning Austin" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Professional Maid Cleaning Austin TX | Anytime Maids Service" />
+  <meta property="og:title" content="Professional Maid Cleaning Austin TX | Anytime Maid Service" />
   <meta property="og:description" content="Reliable house cleaning, deep cleaning & virtual DIY help in Austin. Book trusted maids. Call 512-945-1625." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="es_US" />
+  <meta property="og:locale:alternate" content="fr_FR" />
   <link rel="canonical" href="https://gkedia11.github.io/anytime-maids-austin/" />
   <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -50,11 +51,11 @@
   <header id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 md:h-20 gap-3">
-        <a href="#home" class="flex items-center gap-2 shrink-0 group" aria-label="Anytime Maids Service home">
-          <img src="images/logo.jpg" alt="Anytime Maids Service logo — sparkling mop and leaf" class="h-11 md:h-14 w-auto object-contain" width="160" height="56" />
+        <a href="#home" class="flex items-center gap-2 shrink-0 group" aria-label="Anytime Maid Service home">
+          <img src="images/logo.jpg" alt="Anytime Maid Service logo — sparkling mop and leaf" class="h-11 md:h-14 w-auto object-contain" width="160" height="56" />
           <span class="hidden sm:block font-extrabold text-base md:text-lg leading-tight">
             <span class="text-primary">Anytime</span>
-            <span class="text-secondary"> Maids</span>
+            <span class="text-secondary"> Maid</span>
             <span class="text-ink block text-xs font-semibold tracking-wide">Service</span>
           </span>
         </a>
@@ -73,9 +74,32 @@
             512-945-1625
           </a>
           <button type="button" data-open-booking class="btn-primary text-sm px-3 sm:px-4 py-2" data-i18n="cta.bookNow">Book Now</button>
-          <div class="flex items-center rounded-full border border-slate-200 overflow-hidden text-xs font-bold" role="group" aria-label="Language">
-            <button type="button" id="lang-en" class="lang-btn active px-2.5 py-1.5" data-lang="en">EN</button>
-            <button type="button" id="lang-es" class="lang-btn px-2.5 py-1.5" data-lang="es">ES</button>
+          <div class="lang-switcher relative" id="lang-switcher">
+            <button type="button" id="lang-toggle" class="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose language">
+              <img src="https://flagcdn.com/w40/us.png" width="20" height="15" alt="" class="lang-flag" id="lang-current-flag" />
+              <span id="lang-current-name" class="lang-name">English</span>
+              <svg class="w-3.5 h-3.5 text-slate-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <ul id="lang-menu" class="lang-menu hidden" role="listbox" aria-label="Languages">
+              <li role="option">
+                <button type="button" class="lang-option active" data-lang="en" data-name="English" data-flag="us">
+                  <img src="https://flagcdn.com/w40/us.png" width="20" height="15" alt="" class="lang-flag" />
+                  <span>English</span>
+                </button>
+              </li>
+              <li role="option">
+                <button type="button" class="lang-option" data-lang="es" data-name="Español" data-flag="es">
+                  <img src="https://flagcdn.com/w40/es.png" width="20" height="15" alt="" class="lang-flag" />
+                  <span>Español</span>
+                </button>
+              </li>
+              <li role="option">
+                <button type="button" class="lang-option" data-lang="fr" data-name="Français" data-flag="fr">
+                  <img src="https://flagcdn.com/w40/fr.png" width="20" height="15" alt="" class="lang-flag" />
+                  <span>Français</span>
+                </button>
+              </li>
+            </ul>
           </div>
           <button type="button" id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-slate-100" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -127,7 +151,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-12">
           <p class="text-primary font-bold text-sm uppercase tracking-wider mb-2" data-i18n="services.kicker">House Cleaning Austin TX</p>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-ink mb-3" data-i18n="services.title">Professional Maids Austin Trust</h2>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-ink mb-3" data-i18n="services.title">Professional Maid Service Austin Trusts</h2>
           <p class="text-slate-600" data-i18n="services.desc">From weekly refresh cleans to move out cleaning Austin homeowners rely on — book your spot today.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="services-grid">
@@ -281,7 +305,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-12">
           <p class="text-primary font-bold text-sm uppercase tracking-wider mb-2" data-i18n="why.kicker">Why Choose Us</p>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-ink mb-3" data-i18n="why.title">Austin Families Trust Anytime Maids</h2>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-ink mb-3" data-i18n="why.title">Austin Families Trust Anytime Maid Service</h2>
           <p class="text-slate-600" data-i18n="why.desc">Warm, reliable professional maids Austin homeowners recommend to friends and neighbors.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
@@ -446,7 +470,7 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
         <div>
           <a href="#home" class="inline-flex items-center gap-2 mb-4">
-            <img src="images/logo.jpg" alt="Anytime Maids Service" class="h-12 w-auto bg-white rounded-lg p-1" width="120" height="48" />
+            <img src="images/logo.jpg" alt="Anytime Maid Service" class="h-12 w-auto bg-white rounded-lg p-1" width="120" height="48" />
           </a>
           <p class="text-sm leading-relaxed" data-i18n="footer.blurb">Cheerful, trustworthy professional maids for house cleaning Austin TX — anytime you need a fresh start.</p>
         </div>
@@ -475,7 +499,7 @@
         </div>
       </div>
       <div class="border-t border-slate-700 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-slate-500">
-        <p>© <span id="year"></span> Anytime Maids Service. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <p>© <span id="year"></span> Anytime Maid Service. <span data-i18n="footer.rights">All rights reserved.</span></p>
         <p data-i18n="footer.seo">Austin maid service · House cleaning Austin TX · Move out cleaning Austin</p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-/* Anytime Maids Service — brand utilities */
+/* Anytime Maid Service — brand utilities */
 :root {
   --primary: #0284C7;
   --secondary: #16A34A;
@@ -98,17 +98,87 @@ body {
   box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
 }
 
-.lang-btn {
+/* Language switcher with flags + full names */
+.lang-switcher {
+  position: relative;
+}
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
   background: #fff;
-  color: #64748b;
-  transition: background 0.15s, color 0.15s;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
 }
-.lang-btn.active {
-  background: var(--primary);
-  color: #fff;
+.lang-toggle:hover,
+.lang-toggle[aria-expanded='true'] {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
 }
-.lang-btn:hover:not(.active) {
+.lang-flag {
+  width: 1.25rem;
+  height: 0.9rem;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08);
+  flex-shrink: 0;
+}
+.lang-name {
+  max-width: 5.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 640px) {
+  .lang-name {
+    display: none;
+  }
+  .lang-toggle {
+    padding: 0.4rem 0.5rem;
+  }
+}
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.4rem);
+  min-width: 10.5rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.85rem;
+  box-shadow: 0 12px 32px -12px rgba(15, 23, 42, 0.25);
+  padding: 0.35rem;
+  z-index: 70;
+  list-style: none;
+  margin: 0;
+}
+.lang-option {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s;
+}
+.lang-option:hover {
   background: #f1f5f9;
+}
+.lang-option.active {
+  background: rgba(2, 132, 199, 0.1);
+  color: var(--primary);
 }
 
 .service-card {
